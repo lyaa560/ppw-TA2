@@ -1,0 +1,293 @@
+/* ==== RESET & FONTS ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom right, #f8f8f8, #e9e5dc);
+  color: #2a2a2a;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  color: #1a1a1a;
+}
+
+/* === HEADER NAVIGATION === */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #1a1a1a;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: #2a2a2a;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav li a:hover {
+  color: #b79b6c;
+  letter-spacing: 0.5px;
+}
+
+/* efek garis bawah animasi saat hover */
+.nav li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #3a4bff;
+  transition: width 0.3s ease;
+}
+
+.nav li a:hover::after {
+  width: 100%;
+}
+
+/* ==== HERO SECTION ==== */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 8%;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero-text h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: #2e2e2e;
+}
+
+.accent {
+  color: #b79b6c;
+}
+
+.hero-text p {
+  line-height: 1.8;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.btn {
+  background: #b79b6c;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #9d865b;
+}
+
+.hero-figure img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #b79b6c;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-figure img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ==== SECTION STRUCTURE ==== */
+section {
+  padding: 80px 8%;
+}
+
+section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+section h3::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #b79b6c;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  border-radius: 5px;
+}
+
+/* ==== ABOUT BOX ==== */
+.about-box {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  padding: 40px 50px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  color: #2f2f2f;
+  transition: transform 0.3s ease;
+  line-height: 1.8;
+}
+
+.about-box:hover {
+  transform: translateY(-5px);
+}
+
+/* ==== EXPERIENCE ==== */
+.experience {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.exp-card {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px 25px;
+  border-left: 5px solid #b79b6c;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+}
+
+.exp-card h4 {
+  margin-bottom: 10px;
+  color: #1e1e1e;
+}
+
+.exp-card span {
+  color: #b79b6c;
+  font-weight: 500;
+}
+
+/* ==== SKILLS SECTION ==== */
+#keahlian {
+  text-align: center;
+}
+
+.skills-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 25px 30px;
+  width: 120px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.skill-card p {
+  font-weight: 600;
+  color: #446ae2;
+  font-size: 0.95rem;
+}
+
+/* ==== EDUCATION ==== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 15px;
+}
+
+thead {
+  background-color: #b79b6c;
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+tbody tr:nth-child(odd) {
+  background: rgba(240, 240, 240, 0.7);
+}
+
+/* ==== FOOTER ==== */
+footer {
+  text-align: center;
+  padding: 40px 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+footer a {
+  color: #b79b6c;
+  margin: 0 8px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #9d865b;
+}
+
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(40px);}
+  to {opacity: 1; transform: translateY(0);}
+}
